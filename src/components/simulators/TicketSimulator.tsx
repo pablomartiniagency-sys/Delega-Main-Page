@@ -1,47 +1,49 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { LucideTimer, LucideAlertTriangle, LucideCheckCircle2, LucideBot } from "lucide-react";
+import { LucideTimer, LucideCheckCircle2, LucideBot } from "lucide-react";
 
 export function TicketSimulator() {
+    const t = useTranslations('Simulators.Ticket');
     const initialTickets = [
-        { id: "T-8942", title: "Configuración webhook errónea", status: "Open", prior: "High", sla: "10m restantes", agent: "No Asignado" },
-        { id: "T-8941", title: "Factura duplicada abril", status: "Open", prior: "Medium", sla: "4h", agent: "Laura (Finanzas)" },
-        { id: "T-8940", title: "Login fallo credenciales", status: "Resolved", prior: "Low", sla: "-", agent: "Agent AI" }
+        { id: "T-8942", title: t('t1title'), status: "Open", prior: "High", sla: t('t1sla'), agent: t('t1agent') },
+        { id: "T-8941", title: t('t2title'), status: "Open", prior: "Medium", sla: t('t2sla'), agent: t('t2agent') },
+        { id: "T-8940", title: t('t3title'), status: "Resolved", prior: "Low", sla: "-", agent: t('t3agent') }
     ];
 
     const [tickets, setTickets] = useState(initialTickets);
 
     useEffect(() => {
-        const t = setTimeout(() => {
+        const timeoutId = setTimeout(() => {
             setTickets(prev => {
                 const newT = [...prev];
-                newT[0] = { ...newT[0], status: "Resolved", agent: "Agent AI v2", sla: "Resuelto en 4m" };
+                newT[0] = { ...newT[0], status: "Resolved", agent: "Agent AI v2", sla: t('t1slaRe') };
                 return newT;
             });
         }, 4000);
 
-        return () => clearTimeout(t);
-    }, []);
+        return () => clearTimeout(timeoutId);
+    }, [t]);
 
     return (
         <div className="w-full h-full flex flex-col font-sans">
             <div className="flex justify-between items-center mb-6 border-b border-border/30 pb-4">
-                <h4 className="text-white font-semibold">Incident Desk</h4>
+                <h4 className="text-white font-semibold">{t('title')}</h4>
                 <div className="flex gap-4 text-xs text-muted-foreground">
-                    <span>SLA Cumplimiento: <strong className="text-emerald-400">99.4%</strong></span>
-                    <span>IA Auto-Resolved: <strong className="text-blue-400">76%</strong></span>
+                    <span>{t('sla')}: <strong className="text-emerald-400">99.4%</strong></span>
+                    <span>{t('aiRes')}: <strong className="text-blue-400">76%</strong></span>
                 </div>
             </div>
 
             <div className="flex flex-col gap-2">
                 <div className="grid grid-cols-12 gap-4 text-xs text-muted-foreground px-4 py-2 uppercase font-semibold">
-                    <div className="col-span-2">Ticket</div>
-                    <div className="col-span-5">Asunto</div>
-                    <div className="col-span-2">Prioridad</div>
-                    <div className="col-span-3 text-right">Owner / SLA</div>
+                    <div className="col-span-2">{t('col1')}</div>
+                    <div className="col-span-5">{t('col2')}</div>
+                    <div className="col-span-2">{t('col3')}</div>
+                    <div className="col-span-3 text-right">{t('col4')}</div>
                 </div>
 
                 <AnimatePresence>
@@ -88,7 +90,7 @@ export function TicketSimulator() {
                     className="text-xs text-muted-foreground hover:text-white border px-4 py-2 rounded-full border-border/50 bg-neutral-900/50"
                     onClick={() => setTickets(initialTickets)}
                 >
-                    Refrescar Entorno (Reset Demo)
+                    {t('reset')}
                 </motion.button>
             </div>
         </div>

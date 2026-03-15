@@ -1,0 +1,261 @@
+{
+  "Navigation": {
+    "product": "Product",
+    "useCases": "Use Cases",
+    "security": "Security & Data",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "logoSpace": "Logo Space"
+  },
+  "Hero": {
+    "badge": "Automation V2",
+    "title1": "Reclaim your time.",
+    "title2": "Automate your business.",
+    "subtitle": "Stop doing repetitive tasks that steal your hours. Delega automates them so you can focus on growing your business.",
+    "primaryCTA": "View live simulators",
+    "secondaryCTA": "I want my time back"
+  },
+  "Modules": {
+    "title": "Solution Modules",
+    "subtitle": "The entire customer lifecycle orchestrated flawlessly: from email inbox triaging to logging and tracking sales opportunities in your database.",
+    "email": {
+      "title": "Smart Inbox Triage",
+      "desc": "Analyzes urgency and prepares drafts based on the corporate KB."
+    },
+    "whatsapp": {
+      "title": "WhatsApp Bot with Human Handoff",
+      "desc": "Real-time support and escalation to human agents when AI limits are reached depending on context."
+    },
+    "crm": {
+      "title": "CRM and Sales Funnel",
+      "desc": "AI extracts metadata to enrich your customer accounts and automate your sales process."
+    },
+    "tickets": {
+      "title": "Incident Resolution / SLA",
+      "desc": "Self-managed incident tickets to improve your customer service level."
+    }
+  },
+  "Architecture": {
+    "title": "Human-in-the-Loop Architecture",
+    "inputs": "Inputs (Mail/WA)",
+    "router": "Agent Router (RAG)",
+    "tools": "Tools / Tools API",
+    "human": "HIL Approval (Human)",
+    "desc": "The agent classifies, uses semantic memory, and suggests drafts to save you time, while enforcing human approval for sensitive tasks."
+  },
+  "FooterCTA": {
+    "title": "Scale your operations without scaling payroll",
+    "subtitle": "Index your commercial and logistics documentation, answer corporate emails, and respond to WhatsApps delivering client documents. GDPR compliant.",
+    "button": "Schedule Tech Consultation"
+  },
+  "Footer": {
+    "desc": "The AI that scales your business effortlessly. Scale your operations at minimum cost, with 100% secure data and zero worries.",
+    "productTitle": "Product",
+    "links": {
+      "email": "Email Agent",
+      "whatsapp": "WhatsApp Hub",
+      "crm": "Database & CRM",
+      "security": "Security"
+    },
+    "resourcesTitle": "Resources",
+    "resourcesLinks": {
+      "docs": "Documentation",
+      "cases": "Case Studies",
+      "contact": "Contact"
+    },
+    "companyTitle": "Company",
+    "companyLinks": {
+      "about": "About Delega",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "© {year} Delega Tech. All rights reserved."
+  },
+  "Producto": {
+    "heroTitle1": "The AI engine that understands ",
+    "heroTitle2": "your business",
+    "heroDesc": "Delega isn't just a chatbot. It's a complete platform to train, deploy, and manage AI agents that automate the tasks stealing your time.",
+    "indexTitle": "Smart Knowledge Ingestion",
+    "indexDesc": "Connect your data sources (Excel, Notion, Google Drive, PDFs, URLs) and Delega instantly creates a semantic knowledge base. Our agents use this info to provide precise answers based exclusively on corporate data.",
+    "indexItems": {
+      "item1": "Automatic document synchronization",
+      "item2": "Exact citations and source references",
+      "item3": "Role-based access control",
+      "item4": "Real-time knowledge updates"
+    },
+    "omniTitle": "Omnichannel Platform",
+    "omniDesc": "Your agents are wherever your customers and employees already communicate. Connect Delega with WhatsApp, Slack, Teams, email, or embed a web widget with a single click.",
+    "omniInternal": "Internal Channels",
+    "omniInternalDesc": "Resolve HR, IT, and ops questions directly inside Slack or Microsoft Teams.",
+    "omniExternal": "External Channels",
+    "omniExternalDesc": "Serve customers 24/7 via WhatsApp, Webchat, or by automatically replying to emails.",
+    "videoPlaceholder": "Demo Video Coming Soon"
+  },
+  "Casos": {
+    "heroTitle1": "Solutions for ",
+    "heroTitle2": "every team",
+    "heroDesc": "Industry-leading companies are already using AI agents to automate operations, cut costs, provide 24/7 service, and improve UX. <br className=\"hidden md:inline\" />Now with Delega, you can too.",
+    "casesList": {
+      "c1Title": "Customer Service",
+      "c1Cat": "Support",
+      "c1Desc": "Automate up to 80% of repetitive customer inquiries across all your channels.",
+      "c1B1": "24/7 instant replies",
+      "c1B2": "Reduced resolution time",
+      "c1B3": "Smart escalation to human agents",
+      "c1B4": "Automatic multilingual support",
+      "c2Title": "Internal IT Support",
+      "c2Cat": "Operations",
+      "c2Desc": "Free up your IT team by answering FAQs regarding access, software, and hardware.",
+      "c2B1": "Deep Slack/Teams integration",
+      "c2B2": "Automatic step-by-step guides",
+      "c2B3": "Reduced employee frustration",
+      "c3Title": "Human Resources",
+      "c3Cat": "HR",
+      "c3Desc": "A virtual assistant for company policies, PTO, payroll, and new hire onboarding.",
+      "c3B1": "24/7 automated onboarding",
+      "c3B2": "Fast answers on policies",
+      "c3B3": "PTO request management",
+      "c3B4": "Complete confidentiality",
+      "c4Title": "Sales & Lead Generation",
+      "c4Cat": "Sales",
+      "c4Desc": "Automatically qualify leads on WhatsApp or Webchat before passing them to sales.",
+      "c4B1": "Conversational data capture",
+      "c4B2": "Lead qualification by potential",
+      "c4B3": "Automated meeting scheduling",
+      "c4B4": "Increased conversion rate",
+      "c5Title": "Legal Assistant",
+      "c5Cat": "Legal",
+      "c5Desc": "Instant semantic search across thousands of contracts, case laws, and company legal docs.",
+      "c5B1": "Fast contract analysis",
+      "c5B2": "Semantic precedent search",
+      "c5B3": "Initial draft generation",
+      "c5B4": "Secure document indexing",
+      "c6Title": "E-Commerce",
+      "c6Cat": "E-commerce",
+      "c6Desc": "Personalized shopping advice and resolution of shipping or return inquiries.",
+      "c6B1": "Personalized recommendations",
+      "c6B2": "Automatic order tracking",
+      "c6B3": "Returns management",
+      "c6B4": "Reduced cart abandonment"
+    },
+    "notFoundTitle": "Can't find your ideal use case?",
+    "notFoundDesc": "Our platform is incredibly flexible. If you have a specific problem that requires handling large volumes of information and precise answers, we can automate it.",
+    "notFoundButton": "Let's discuss your project"
+  },
+  "Seguridad": {
+    "title": "Security & Data Model",
+    "desc": "Design and development focused on data minimization and RGPD/GDPR compliance from day one.",
+    "ueTitle": "EU Hosting",
+    "ueDesc": "Clusters and vector databases operate in regulated datacenters within European territory for full compliance.",
+    "hilTitle": "Human Approval",
+    "hilDesc": "High-impact actions (payments, critical incidents, or vital operations) require explicit approval from a human agent.",
+    "waTitle": "WhatsApp 24h Rules",
+    "waDesc": "We respect the WhatsApp 24-hour service window and use official templates to reopen conversations with your clients.",
+    "rbacTitle": "Roles & Permissions (RBAC)",
+    "rbacDesc": "Granular access. Employees only see what's necessary to resolve their incidents. Immutable audit logs built-in."
+  },
+  "Nosotros": {
+    "heroTitle1": "Automating the ",
+    "heroTitle2": "future of work",
+    "heroDesc": "At Delega we believe AI isn't here to replace people, but to free them from repetitive tasks and allow them to focus on what truly matters.",
+    "historyTitle": "Our Story",
+    "historyP1": "Delega was born from a frustration: watching talented teams spend hours every day searching for scattered information, answering the same questions, and managing inefficient manual processes.",
+    "historyP2": "We realized large language model (LLM) technology had the potential to solve this problem, but the technical barrier to safely implementing them in companies was too high. So we decided to build the platform we wanted to use ourselves.",
+    "historyP3": "The idea was clear: Delega must eliminate repetitive, tedious tasks so entrepreneurs reclaim their lost time and focus on their business strategy.",
+    "valuesTitle": "Our Values",
+    "v1Title": "Security by Design",
+    "v1Desc": "Your data is yours. We do not train public models on our clients' information.",
+    "v2Title": "Simplicity",
+    "v2Desc": "We hide technological complexity so anyone can deploy an agent in minutes.",
+    "v3Title": "Accuracy",
+    "v3Desc": "We implement systems to minimize hallucinations and ensure answers are strictly tied to your context.",
+    "v4Title": "Integration",
+    "v4Desc": "We work where you work. Zero adoption friction for your team and your customers.",
+    "teamTitle": "The Team",
+    "teamDesc": "We are a team of engineers, business consultants, and product experts sharing a passion for creating functional software and AI agents to solve real problems for small and medium businesses.",
+    "teamButton": "Join us"
+  },
+  "Contacto": {
+    "title": "Start your transition",
+    "desc": "Fill out the form and our technical team will evaluate the feasibility of implementing Delega in your infrastructure.",
+    "emailLabel": "Professional Email",
+    "emailPlaceholder": "example@yourcompany.com",
+    "volLabel": "Incident Volume/Month (Approx)",
+    "volPlaceholder": "Ex. 1000 tickets",
+    "stackLabel": "Current Tech Stack",
+    "stackPlaceholder": "Gmail, Shopify, HubSpot...",
+    "button": "Schedule Tech Call"
+  },
+  "Simulators": {
+    "Email": {
+      "subject": "Urgent issue with Shopify integration",
+      "sender": "client@ecommerce.xyz",
+      "body": "Hi team, the payment webhook has been failing for 2 hours and our orders are blocked. Can you review it urgently? Thanks.",
+      "statusBox": "Mailbox status",
+      "reset": "Reset",
+      "severity": "Severity: High",
+      "tag": "Tag: L2 Support",
+      "impact": "Impact: Billing",
+      "draftTitle": "Draft generated by Delega",
+      "draftText": "\"Hello. We have detected the webhook block. According to SOP-293 policy, we are restarting the Stripe bridge cache. It should stabilize in 5 mins. We will confirm shortly.\"",
+      "approve": "Approve and Send",
+      "waiting": "Waiting for new webhook mail..."
+    },
+    "CRM": {
+      "title": "Recent Accounts",
+      "autosync": "Autosync ON",
+      "statusAlert": "Alert",
+      "statusActive": "Active",
+      "statusTracking": "Tracking",
+      "owner": "Owner",
+      "ago14m": "14 mins ago",
+      "ago2d": "2 days ago",
+      "yesterday18": "Yesterday 18:00",
+      "yesterday09": "Yesterday 09:30",
+      "ago3d": "3 days ago",
+      "tags": {
+        "Key Account": "Key Account",
+        "SLA 4h": "SLA 4h",
+        "Renovacion": "Renewal",
+        "Riesgo Medio": "Medium Risk",
+        "Onboarding": "Onboarding",
+        "Plan Pro": "Pro Plan",
+        "Soporte": "Support",
+        "Nivel 2": "Level 2",
+        "Churn Risk": "Churn Risk"
+      }
+    },
+    "Ticket": {
+      "title": "Incident Desk",
+      "sla": "SLA Compliance",
+      "aiRes": "AI Auto-Resolved",
+      "col1": "Ticket",
+      "col2": "Subject",
+      "col3": "Priority",
+      "col4": "Owner / SLA",
+      "reset": "Refresh Environment (Reset Demo)",
+      "t1title": "Incorrect webhook configuration",
+      "t1agent": "Unassigned",
+      "t1sla": "10m left",
+      "t1slaRe": "Resolved in 4m",
+      "t2title": "Duplicate invoice April",
+      "t2agent": "Laura (Finance)",
+      "t2sla": "4h",
+      "t3title": "Login credentials failure",
+      "t3agent": "Agent AI"
+    },
+    "WhatsApp": {
+      "official": "Official business account",
+      "reset": "Reset",
+      "company": "Delega Enterprise",
+      "msg1": "Hello Victor! 👋 I'm your Delega assistant. I see you have a shipment in progress to your branch.",
+      "msg2": "Hi. That's right, I'd like to know the exact status of my shipment #4928",
+      "msg3": "Order #4928 is out for local delivery. It will arrive today between 16:00 and 18:00h.",
+      "msg4": "Ah perfect. Can I change the address to the main office?",
+      "msg5": "Since the package is already out for final delivery, escalating to a human is necessary according to our policy. An agent will intervene now.",
+      "msg6": "Hello! I'm Carlos. The delivery driver already has the route, but I'll call the base to redirect it. Give us a moment.",
+      "bot": "Bot",
+      "agent": "Agent"
+    }
+  }
+}

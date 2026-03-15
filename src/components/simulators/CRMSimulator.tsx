@@ -1,42 +1,65 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { LucideBuilding, LucideUser, LucideClock, LucideAlertCircle } from "lucide-react";
+import { LucideBuilding, LucideUser, LucideClock } from "lucide-react";
 
 export function CRMSimulator() {
+    const t = useTranslations('Simulators.CRM');
     const accounts = [
         {
             company: "Acme Corp Logistics",
             contact: "Laura V.",
-            lastInteraction: "Hace 14 min",
-            tags: ["Key Account", "SLA 4h"],
-            status: "Activo",
+            lastInteraction: t('ago14m'),
+            tags: [t('tags.Key Account'), t('tags.SLA 4h')],
+            statusType: "Activo",
+            status: t('statusActive'),
             owner: "Agent AI v2"
         },
         {
             company: "EcoFood Distribución",
             contact: "Carlos M.",
-            lastInteraction: "Hace 2 días",
-            tags: ["Renovación", "Riesgo Medio"],
-            status: "Alerta",
+            lastInteraction: t('ago2d'),
+            tags: [t('tags.Renovacion'), t('tags.Riesgo Medio')],
+            statusType: "Alerta",
+            status: t('statusAlert'),
             owner: "Marcos (Ventas)"
         },
         {
             company: "TechRetail SA",
             contact: "Elena R.",
-            lastInteraction: "Ayer 18:00",
-            tags: ["Onboarding", "Plan Pro"],
-            status: "Tracking",
+            lastInteraction: t('yesterday18'),
+            tags: [t('tags.Onboarding'), t('tags.Plan Pro')],
+            statusType: "Tracking",
+            status: t('statusTracking'),
             owner: "System"
+        },
+        {
+            company: "Global Services LLC",
+            contact: "Miguel T.",
+            lastInteraction: t('yesterday09'),
+            tags: [t('tags.Soporte'), t('tags.Nivel 2')],
+            statusType: "Activo",
+            status: t('statusActive'),
+            owner: "Agent AI v2"
+        },
+        {
+            company: "Innovatech Solutions",
+            contact: "Sofía M.",
+            lastInteraction: t('ago3d'),
+            tags: [t('tags.Churn Risk'), t('tags.Renovacion')],
+            statusType: "Alerta",
+            status: t('statusAlert'),
+            owner: "Laura (CSM)"
         }
     ];
 
     return (
         <div className="w-full h-full flex flex-col font-sans">
             <div className="flex justify-between items-center mb-6">
-                <h4 className="text-white font-semibold">Cuentas Recientes</h4>
-                <Badge variant="outline" className="text-xs bg-muted">Autosync ON</Badge>
+                <h4 className="text-white font-semibold">{t('title')}</h4>
+                <Badge variant="outline" className="text-xs bg-muted">{t('autosync')}</Badge>
             </div>
 
             <div className="flex flex-col gap-3 h-[300px] overflow-hidden">
@@ -48,10 +71,10 @@ export function CRMSimulator() {
                         transition={{ delay: 0.2 * i }}
                         className="group relative flex items-center justify-between p-4 border border-border/50 bg-neutral-900/40 rounded-xl hover:bg-neutral-800/60 transition-colors"
                     >
-                        {acc.status === 'Alerta' && (
+                        {acc.statusType === 'Alerta' && (
                             <div className="absolute left-0 top-0 bottom-0 w-1 bg-red-500 rounded-l-xl opacity-50"></div>
                         )}
-                        {acc.status === 'Activo' && (
+                        {acc.statusType === 'Activo' && (
                             <div className="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500 rounded-l-xl opacity-50"></div>
                         )}
 
@@ -74,7 +97,7 @@ export function CRMSimulator() {
                                     <span key={idx} className="px-2 py-0.5 rounded text-[10px] uppercase font-semibold bg-neutral-800 text-neutral-300 border border-border/30">{t}</span>
                                 ))}
                             </div>
-                            <span className="text-[11px] text-muted-foreground font-mono bg-neutral-950 px-2 py-0.5 rounded-full border border-border/30">Owner: {acc.owner}</span>
+                            <span className="text-[11px] text-muted-foreground font-mono bg-neutral-950 px-2 py-0.5 rounded-full border border-border/30">{t('owner')}: {acc.owner}</span>
                         </div>
                     </motion.div>
                 ))}

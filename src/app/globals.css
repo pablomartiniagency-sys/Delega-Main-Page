@@ -36,33 +36,33 @@
   }
 
   .dark {
-    --background: 240 10% 4%;
-    --foreground: 0 0% 98%;
+    --background: 240 5% 6%; /* Deep Charcoal / Slate base (Claude aesthetic) */
+    --foreground: 30 15% 90%; /* Soft off-white / beige text */
 
-    --card: 240 10% 6%;
-    --card-foreground: 0 0% 98%;
+    --card: 240 5% 8%; /* Slightly lighter charcoal for cards */
+    --card-foreground: 30 15% 90%;
 
-    --popover: 240 10% 4%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 240 5% 8%;
+    --popover-foreground: 30 15% 90%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 15 80% 64%; /* Muted Coral / Orange (#F87171 roughly) for n8n/Claude vibe */
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 240 4% 16%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 4% 16%;
+    --muted: 240 5% 12%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 240 4% 16%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 15 30% 16%; /* Dark warm accent */
+    --accent-foreground: 15 80% 64%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 240 4.9% 83.9%;
+    --border: 240 5% 12%; /* Very subtle borders */
+    --input: 240 5% 12%;
+    --ring: 15 80% 64%;
   }
 }
 
@@ -77,6 +77,27 @@
 }
 
 .bg-grid-white {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Spotlight Card Defaults */
+.spotlight-card {
+  --mouse-x: -1000px;
+  --mouse-y: -1000px;
+}
+
+/* Sleek Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
 }

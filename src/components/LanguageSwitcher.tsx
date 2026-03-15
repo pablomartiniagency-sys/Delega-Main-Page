@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from '@/i18n/routing';
 import {
     Select,
     SelectContent,
@@ -10,34 +10,18 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { Globe } from 'lucide-react';
+import { useTransition } from 'react';
 
 export function LanguageSwitcher() {
     const locale = useLocale();
+    const router = useRouter();
     const pathname = usePathname();
+    const [isPending, startTransition] = useTransition();
 
     const onValueChange = (nextLocale: string) => {
-        let basePath = pathname;
-        
-        // Remove the current locale prefix from the pathname
-        if (pathname.startsWith(`/${locale}/`)) {
-            basePath = pathname.substring(locale.length + 1);
-        } else if (pathname === `/${locale}`) {
-            basePath = '/';
-        }
-        
-        // Return to default locale or append new locale branch
-        let navigatePath = '';
-        if (nextLocale === 'es') {
-            navigatePath = basePath;
-        } else {
-            navigatePath = `/${nextLocale}${basePath === '/' ? '' : basePath}`;
-        }
-
-        // next-intl middleware respects the NEXT_LOCALE cookie.
-        // We must update the cookie manually before a hard navigation, 
-        // otherwise middleware redirects back to the previous language.
-        document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000; SameSite=Lax`;
-        window.location.href = navigatePath;
+        startTransition(() => {
+            router.replace({ pathname } as any, { locale: nextLocale });
+        });
     };
 
     return (

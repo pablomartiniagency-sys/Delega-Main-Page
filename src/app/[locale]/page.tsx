@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { EmailSimulator } from '@/components/simulators/EmailSimulator';
 import { WhatsAppSimulator } from '@/components/simulators/WhatsAppSimulator';
@@ -342,7 +342,7 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-zinc-400 font-light max-w-2xl mx-auto mb-12">
             {tFooterCTA('subtitle')}
             </p>
-            <Link href={`/${locale}/contacto` as any}>
+            <Link href="/contacto">
                 <Button size="lg" className="relative group bg-white text-black font-semibold h-16 px-12 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:shadow-[0_0_50px_rgba(255,255,255,0.25)] transition-all hover:scale-105 active:scale-95 overflow-hidden text-lg">
                 <span className="relative z-10">{tFooterCTA('button')}</span>
                 <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />

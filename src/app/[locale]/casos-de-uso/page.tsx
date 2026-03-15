@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { getTranslations } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const params = await props.params;

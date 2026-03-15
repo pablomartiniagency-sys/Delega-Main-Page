@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { Button } from './ui/button';
 import { useTranslations, useLocale } from 'next-intl';
@@ -15,11 +15,11 @@ export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
-        { href: `/${locale}/producto`, label: t('product') },
-        { href: `/${locale}/casos-de-uso`, label: t('useCases') },
-        { href: `/${locale}/seguridad`, label: t('security') },
-        { href: `/${locale}/sobre-nosotros`, label: t('about') },
-    ];
+        { href: '/producto', label: t('product') },
+        { href: '/casos-de-uso', label: t('useCases') },
+        { href: '/seguridad', label: t('security') },
+        { href: '/sobre-nosotros', label: t('about') },
+    ] as const;
 
     return (
         <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-background/40 backdrop-blur-xl supports-[backdrop-filter]:bg-background/40">
@@ -28,7 +28,7 @@ export function Navbar() {
 
             <div className="container flex h-20 items-center justify-between max-w-[1400px] mx-auto px-6 relative">
                 {/* Logo (Desktop & Mobile Unified) */}
-                <Link href={`/${locale}` as any} className="flex items-center space-x-3 group z-10 shrink-0">
+                <Link href="/" className="flex items-center space-x-3 group z-10 shrink-0">
                     <div className="w-10 h-10 relative flex items-center justify-center">
                         <Image src="/delega_logo.png" alt="Delega Logo" width={40} height={40} className="object-contain w-full h-full group-hover:scale-110 transition-all duration-300" priority />
                     </div>
@@ -38,7 +38,7 @@ export function Navbar() {
                 {/* Desktop Navigation (Centered Floating Pill) */}
                 <nav className="hidden md:flex items-center space-x-8 text-[15px] font-medium absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border border-white/10 px-8 py-3 rounded-full bg-white/[0.03] backdrop-blur-3xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.5)] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-500 z-0">
                     {navLinks.map((link) => (
-                        <Link key={link.href} href={link.href as any} className="transition-all hover:text-white text-white/60 relative group py-1">
+                        <Link key={link.href} href={link.href} className="transition-all hover:text-white text-white/60 relative group py-1">
                             {link.label}
                             {/* Animated glowing underline indicator */}
                             <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-orange-500/0 via-orange-500 to-orange-500/0 transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100"></span>
@@ -51,7 +51,7 @@ export function Navbar() {
                     <div className="hidden sm:block">
                          <LanguageSwitcher />
                     </div>
-                    <Link href={`/${locale}/contacto` as any} className="hidden md:block">
+                    <Link href="/contacto" className="hidden md:block">
                         <Button className="text-[15px] font-semibold bg-white text-black hover:bg-zinc-200 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all hover:scale-105 active:scale-95 px-7 h-11 rounded-full border border-white/20">{t('contact')}</Button>
                     </Link>
                     
@@ -80,7 +80,7 @@ export function Navbar() {
                             {navLinks.map((link) => (
                                 <Link 
                                     key={link.href} 
-                                    href={link.href as any} 
+                                    href={link.href} 
                                     className="text-lg font-medium text-white/80 hover:text-white transition-colors py-2"
                                     onClick={() => setIsOpen(false)}
                                 >
@@ -89,7 +89,7 @@ export function Navbar() {
                             ))}
                             <div className="pt-4 border-t border-white/10 flex flex-col space-y-4">
                                 <LanguageSwitcher />
-                                <Link href={`/${locale}/contacto` as any} onClick={() => setIsOpen(false)}>
+                                <Link href="/contacto" onClick={() => setIsOpen(false)}>
                                     <Button className="w-full justify-center text-base">{t('contact')}</Button>
                                 </Link>
                             </div>

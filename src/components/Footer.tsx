@@ -9,7 +9,7 @@ export function Footer() {
             <div className="container max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div>
                     <div className="flex items-center space-x-2 mb-4">
-                        <div className="w-8 h-8 relative flex items-center justify-center shadow-lg shadow-blue-500/20">
+                        <div className="w-8 h-8 relative flex items-center justify-center shadow-lg shadow-orange-500/20">
                              <img src="/delega_logo.png" alt="Delega Logo" className="object-contain w-full h-full" />
                         </div>
                         <span className="font-bold tracking-tight text-xl">Delega.</span>

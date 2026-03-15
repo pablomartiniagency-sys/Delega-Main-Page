@@ -180,7 +180,7 @@ export default function Home() {
                     <span className="relative z-10">{tHero('primaryCTA')}</span>
                     <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
                 </Button>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-10 rounded-full border-white/20 text-foreground bg-white/5 backdrop-blur-lg shadow-sm hover:bg-white/10 transition-all hover:scale-105 active:scale-95 text-base">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-10 rounded-full border-white/30 text-foreground bg-white/10 backdrop-blur-lg shadow-sm hover:bg-white/20 transition-all hover:scale-105 active:scale-95 text-base">
                     {tHero('secondaryCTA')}
                 </Button>
             </div>
@@ -298,7 +298,7 @@ export default function Home() {
             {/* Connection Line Background Layer */}
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-red-500/5 pointer-events-none rounded-3xl" />
             
-            <div className="arch-box relative z-10 px-6 py-5 bg-neutral-900 border border-white/10 rounded-2xl text-[15px] font-medium text-zinc-300 shadow-xl w-full md:w-auto">
+            <div className="arch-box relative z-10 px-6 py-5 border border-white/10 rounded-2xl text-[15px] font-medium text-zinc-300 shadow-xl w-full md:w-auto bg-gradient-to-br from-neutral-900 to-black">
               {tArch('inputs')}
             </div>
             
@@ -306,7 +306,7 @@ export default function Home() {
                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-400 to-transparent animate-[shimmer_2s_infinite]" />
             </div>
 
-            <div className="arch-box relative z-10 px-6 py-5 bg-orange-950/30 border border-orange-500/30 rounded-2xl text-[15px] text-orange-200 font-semibold shadow-[0_0_30px_rgba(249,115,22,0.1)] w-full md:w-auto">
+            <div className="arch-box relative z-10 px-6 py-5 border border-orange-500/40 rounded-2xl text-[15px] text-orange-200 font-semibold shadow-[0_0_30px_rgba(249,115,22,0.15)] w-full md:w-auto bg-gradient-to-br from-orange-950/40 to-black">
               {tArch('router')}
             </div>
             
@@ -314,7 +314,7 @@ export default function Home() {
                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-400 to-transparent animate-[shimmer_2s_infinite_0.5s]" />
             </div>
 
-            <div className="arch-box relative z-10 px-6 py-5 bg-red-950/30 border border-red-500/30 rounded-2xl text-[15px] text-red-200 font-semibold shadow-[0_0_30px_rgba(248,113,113,0.1)] w-full md:w-auto">
+            <div className="arch-box relative z-10 px-6 py-5 border border-red-500/40 rounded-2xl text-[15px] text-red-200 font-semibold shadow-[0_0_30px_rgba(248,113,113,0.15)] w-full md:w-auto bg-gradient-to-br from-red-950/40 to-black">
               {tArch('tools')}
             </div>
             
@@ -322,7 +322,7 @@ export default function Home() {
                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-rose-400 to-transparent animate-[shimmer_2s_infinite_1s]" />
             </div>
 
-            <div className="arch-box relative z-10 px-6 py-5 bg-rose-950/30 border border-rose-500/30 rounded-2xl text-[15px] text-rose-200 font-semibold shadow-[0_0_30px_rgba(244,63,94,0.1)] w-full md:w-auto border-dashed">
+            <div className="arch-box relative z-10 px-6 py-5 border border-rose-500/40 rounded-2xl text-[15px] text-rose-200 font-semibold shadow-[0_0_30px_rgba(244,63,94,0.15)] w-full md:w-auto bg-gradient-to-br from-rose-950/40 to-black">
               {tArch('human')}
             </div>
           </div>

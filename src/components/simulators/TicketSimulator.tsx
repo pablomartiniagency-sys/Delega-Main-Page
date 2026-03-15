@@ -34,7 +34,7 @@ export function TicketSimulator() {
                 <h4 className="text-white font-semibold">{t('title')}</h4>
                 <div className="flex gap-4 text-xs text-muted-foreground">
                     <span>{t('sla')}: <strong className="text-emerald-400">99.4%</strong></span>
-                    <span>{t('aiRes')}: <strong className="text-blue-400">76%</strong></span>
+                    <span>{t('aiRes')}: <strong className="text-orange-400">76%</strong></span>
                 </div>
             </div>
 
@@ -63,14 +63,14 @@ export function TicketSimulator() {
                                 <Badge variant="outline" className={`
                    ${t.prior === 'High' ? 'border-red-500/50 text-red-400 bg-red-950/30' : ''}
                    ${t.prior === 'Medium' ? 'border-orange-500/50 text-orange-400 bg-orange-950/30' : ''}
-                   ${t.prior === 'Low' ? 'border-blue-500/50 text-blue-400 bg-blue-950/30' : ''}
+                   ${t.prior === 'Low' ? 'border-zinc-500/50 text-zinc-400 bg-zinc-950/30' : ''}
                 `}>{t.prior}</Badge>
                             </div>
 
                             <div className="col-span-3 flex flex-col items-end gap-1">
                                 <div className="flex items-center gap-1.5 font-medium text-xs">
-                                    {t.agent.includes('AI') ? <LucideBot className="h-3 w-3 text-blue-400" /> : null}
-                                    <span className={t.agent.includes('AI') ? 'text-blue-400' : 'text-neutral-300'}>{t.agent}</span>
+                                    {t.agent.includes('AI') ? <LucideBot className="h-3 w-3 text-orange-400" /> : null}
+                                    <span className={t.agent.includes('AI') ? 'text-orange-400' : 'text-neutral-300'}>{t.agent}</span>
                                 </div>
                                 {t.status === 'Open' ? (
                                     <span className="flex items-center gap-1 text-[10px] text-red-400 font-mono"><LucideTimer className="h-3 w-3" /> {t.sla}</span>

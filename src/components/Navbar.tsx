@@ -52,7 +52,7 @@ export function Navbar() {
                          <LanguageSwitcher />
                     </div>
                     <Link href="/contacto" className="hidden md:block">
-                        <Button className="text-[15px] font-semibold bg-white text-black hover:bg-zinc-200 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all hover:scale-105 active:scale-95 px-7 h-11 rounded-full border border-white/20">{t('contact')}</Button>
+                        <Button className="text-[15px] font-semibold bg-white text-black hover:bg-zinc-200 shadow-[0_0_20px_rgba(249,115,22,0.15)] hover:shadow-[0_0_30px_rgba(249,115,22,0.3)] border border-orange-500/20 transition-all hover:scale-105 active:scale-95 px-7 h-11 rounded-full">{t('contact')}</Button>
                     </Link>
                     
                     {/* Mobile Menu Toggle */}
@@ -87,10 +87,10 @@ export function Navbar() {
                                     {link.label}
                                 </Link>
                             ))}
-                            <div className="pt-4 border-t border-white/10 flex flex-col space-y-4">
+                            <div className="pt-6 pb-2 border-t border-white/10 flex flex-col space-y-5">
                                 <LanguageSwitcher />
                                 <Link href="/contacto" onClick={() => setIsOpen(false)}>
-                                    <Button className="w-full justify-center text-base">{t('contact')}</Button>
+                                    <Button className="w-full justify-center text-base h-12">{t('contact')}</Button>
                                 </Link>
                             </div>
                         </div>

@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "netlify-build": "npm install @netlify/plugin-nextjs@4.41.3 && next build"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@netlify/plugin-nextjs": "^4.41.3",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-label": "^2.1.8",
@@ -22,20 +24,20 @@
     "framer-motion": "^12.35.0",
     "gsap": "^3.14.2",
     "lucide-react": "^0.577.0",
-    "next": "^16.1.6",
-    "next-intl": "^4.8.3",
-    "next-mdx-remote": "^6.0.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "tailwind-merge": "^3.5.0",
+    "next": "^14.2.15",
+    "next-intl": "^3.23.5",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^10.0.3",
-    "eslint-config-next": "^16.1.6",
+    "eslint": "^9.14.0",
+    "eslint-config-next": "^15.0.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

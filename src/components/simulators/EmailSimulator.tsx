@@ -54,7 +54,7 @@ export function EmailSimulator() {
                                 animate={{ opacity: 1, y: 0 }}
                                 className="w-full"
                             >
-                                <div className="flex items-center gap-2 text-xs text-blue-400 font-mono mb-3">
+                                <div className="flex items-center gap-2 text-xs text-orange-400 font-mono mb-3">
                                     <LucideSparkles className="h-3 w-3" /> Agent_Router_v2
                                 </div>
                                 <div className="flex flex-wrap gap-2 mb-4">
@@ -72,13 +72,13 @@ export function EmailSimulator() {
                                 transition={{ delay: 0.5 }}
                                 className="w-full mt-2"
                             >
-                                <div className="bg-blue-950/20 border border-blue-900/30 rounded p-3 mb-4">
-                                    <p className="text-xs text-blue-300 flex items-center gap-1 mb-2 font-medium">{t('draftTitle')} <LucideCheckCircle2 className="h-3 w-3 inline" /></p>
+                                <div className="bg-orange-950/20 border border-orange-900/30 rounded p-3 mb-4">
+                                    <p className="text-xs text-orange-300 flex items-center gap-1 mb-2 font-medium">{t('draftTitle')} <LucideCheckCircle2 className="h-3 w-3 inline" /></p>
                                     <p className="text-muted-foreground italic">{t('draftText')}</p>
                                 </div>
 
                                 <div className="flex gap-2 w-full mt-auto">
-                                    <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white w-full"><LucideReply className="h-3 w-3 mr-2" /> {t('approve')}</Button>
+                                    <Button size="sm" className="bg-orange-600 hover:bg-orange-700 text-white w-full"><LucideReply className="h-3 w-3 mr-2" /> {t('approve')}</Button>
                                 </div>
                             </motion.div>
                         )}

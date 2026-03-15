@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import { getTranslations } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const params = await props.params;
@@ -29,7 +30,7 @@ export default function CasosDeUsoPage() {
                 t('casesList.c1B3'),
                 t('casesList.c1B4')
             ],
-            image: "/cases/case_support.png",
+            image: "/cases/ai_support.png",
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-500"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" /><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" /></svg>
             )
@@ -43,7 +44,7 @@ export default function CasosDeUsoPage() {
                 t('casesList.c2B2'),
                 t('casesList.c2B3')
             ],
-            image: "/cases/case_it.png",
+            image: "/cases/ai_it.png",
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-400"><rect width="20" height="14" x="2" y="3" rx="2" /><line x1="8" x2="16" y1="21" y2="21" /><line x1="12" x2="12" y1="17" y2="21" /></svg>
             )
@@ -58,7 +59,7 @@ export default function CasosDeUsoPage() {
                 t('casesList.c3B3'),
                 t('casesList.c3B4')
             ],
-            image: "/cases/case_hr.png",
+            image: "/cases/ai_hr.png",
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-coral-500"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
             )
@@ -73,7 +74,7 @@ export default function CasosDeUsoPage() {
                 t('casesList.c4B3'),
                 t('casesList.c4B4')
             ],
-            image: "/cases/case_sales.png",
+            image: "/cases/ai_sales.png",
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-500"><line x1="12" x2="12" y1="2" y2="22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
             )
@@ -88,7 +89,7 @@ export default function CasosDeUsoPage() {
                 t('casesList.c5B3'),
                 t('casesList.c5B4')
             ],
-            image: "/cases/case_legal.png",
+            image: "/cases/ai_legal.png",
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-400"><path d="m12 14 4-4" /><path d="M3.34 19a10 10 0 1 1 17.32 0" /></svg>
             )
@@ -103,7 +104,7 @@ export default function CasosDeUsoPage() {
                 t('casesList.c6B3'),
                 t('casesList.c6B4')
             ],
-            image: "/cases/case_ecommerce.png",
+            image: "/cases/ai_ecommerce.png",
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-rose-400"><circle cx="8" cy="21" r="1" /><circle cx="19" cy="21" r="1" /><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" /></svg>
             )
@@ -119,9 +120,9 @@ export default function CasosDeUsoPage() {
                 <div className="container relative max-w-7xl mx-auto px-6">
                     <div className="flex flex-col items-center space-y-6 text-center mb-16">
                         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-                            {t('heroTitle1')} <span className="text-blue-500">{t('heroTitle2')}</span>
+                            {t('heroTitle1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-rose-400 drop-shadow-lg pb-2">{t('heroTitle2')}</span>
                         </h1>
-                        <p className="max-w-[800px] text-zinc-400 text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: t('heroDesc') }}></p>
+                        <p className="max-w-[800px] text-zinc-400 text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: t.raw('heroDesc') }}></p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -174,9 +175,11 @@ export default function CasosDeUsoPage() {
                     <p className="text-zinc-400 mb-8">
                         {t('notFoundDesc')}
                     </p>
-                    <button className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-zinc-200 transition-colors">
-                        {t('notFoundButton')}
-                    </button>
+                    <Link href="/contacto">
+                        <button className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-zinc-200 transition-colors">
+                            {t('notFoundButton')}
+                        </button>
+                    </Link>
                 </div>
             </section>
         </div>

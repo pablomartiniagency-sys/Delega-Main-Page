@@ -71,9 +71,9 @@ export default function ProductoPage() {
                                 {/* Top bar */}
                                 <div className="h-12 border-b border-white/5 bg-white/[0.02] flex items-center px-4 shrink-0 z-10 w-full relative">
                                     <div className="flex gap-2">
-                                        <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
-                                        <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
-                                        <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
+                                        <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                                        <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                                        <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
                                     </div>
                                 </div>
                                 <div className="bg-black flex-1 relative z-10 w-full flex items-center justify-center overflow-hidden rounded-b-3xl">
@@ -94,9 +94,9 @@ export default function ProductoPage() {
                                 {/* Top bar */}
                                 <div className="h-12 border-b border-white/5 bg-white/[0.02] flex items-center px-4 shrink-0 z-10 w-full relative">
                                     <div className="flex gap-2">
-                                        <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
-                                        <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
-                                        <div className="w-3 h-3 rounded-full bg-zinc-700"></div>
+                                        <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                                        <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                                        <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
                                     </div>
                                 </div>
                                 <div className="bg-black flex-1 relative z-10 w-full flex items-center justify-center overflow-hidden rounded-b-3xl">

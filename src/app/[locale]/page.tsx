@@ -44,11 +44,6 @@ export default function Home() {
     // 1. Hero Animations (Staggered Reveal & Parallax)
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.fromTo('.hero-badge', 
-      { y: 20, opacity: 0 }, 
-      { y: 0, opacity: 1, duration: 0.6, delay: 0.2 }
-    );
-
     // Split text animation for Title (poor man's split text without Club GSAP plugin)
     const titleLines = titleRef.current?.children;
     if (titleLines) {

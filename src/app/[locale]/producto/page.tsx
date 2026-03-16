@@ -19,7 +19,7 @@ export default function ProductoPage() {
             <div className="flex-1">
                 <section className="w-full py-24 md:py-32 lg:py-40 bg-black text-white relative overflow-hidden flex items-center justify-center min-h-[60vh]">
                     <div className="absolute inset-0 z-0">
-                        <Image src="/hero_bg.png" alt="Delega Platform" fill className="object-cover opacity-30 mix-blend-screen" priority />
+                        <Image src="/hero_bg.png" alt="Delega Platform" fill quality={100} unoptimized className="object-cover opacity-30" priority />
                         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black pointer-events-none" />
                     </div>
                     {/* Glow effect */}
@@ -77,7 +77,7 @@ export default function ProductoPage() {
                                     </div>
                                 </div>
                                 <div className="bg-black flex-1 relative z-10 w-full flex items-center justify-center overflow-hidden rounded-b-3xl">
-                                    <Image src="/producto/kb.png" alt="Knowledge Base Processing" fill className="object-cover opacity-80 mix-blend-screen scale-105 group-hover:scale-100 transition-transform duration-700" />
+                                    <Image src="/producto/kb.png" alt="Knowledge Base Processing" fill quality={100} unoptimized className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 will-change-transform" />
                                     <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
                                     <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black via-black/80 to-transparent z-20 pointer-events-none" />
                                 </div>
@@ -100,7 +100,7 @@ export default function ProductoPage() {
                                     </div>
                                 </div>
                                 <div className="bg-black flex-1 relative z-10 w-full flex items-center justify-center overflow-hidden rounded-b-3xl">
-                                    <Image src="/cases/case_support.png" alt="Omnichannel AI Routing" fill className="object-cover object-left opacity-80 mix-blend-screen scale-105 group-hover:scale-100 transition-transform duration-700" />
+                                    <Image src="/cases/case_support.png" alt="Omnichannel AI Routing" fill quality={100} unoptimized className="object-cover object-left opacity-80 group-hover:scale-105 transition-transform duration-700 will-change-transform" />
                                     <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
                                     <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black via-black/80 to-transparent z-20 pointer-events-none" />
                                 </div>

@@ -13,6 +13,11 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -150,7 +155,7 @@ export default function Home() {
       <section ref={heroRef} className="pt-32 pb-32 px-6 relative overflow-hidden flex flex-col items-center justify-center text-center min-h-[90vh]">
         {/* Cinematic AI Background */}
         <div className="absolute inset-0 -z-20">
-            <Image src="/hero_bg.png" alt="AI Hero Background" fill className="object-cover opacity-60 mix-blend-screen" priority />
+            <Image src="/hero_bg.png" alt="AI Hero Background" fill quality={100} unoptimized className="object-cover opacity-50" priority />
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black pointer-events-none" />
         </div>
         
@@ -176,13 +181,33 @@ export default function Home() {
             </p>
 
             <div ref={ctaRef} className="flex flex-col sm:flex-row gap-5 mb-24 w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto relative group bg-white text-black font-semibold h-14 px-10 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all hover:scale-105 active:scale-95 overflow-hidden text-base">
-                    <span className="relative z-10">{tHero('primaryCTA')}</span>
-                    <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
-                </Button>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-10 rounded-full border-white/30 text-foreground bg-white/10 backdrop-blur-lg shadow-sm hover:bg-white/20 transition-all hover:scale-105 active:scale-95 text-base">
-                    {tHero('secondaryCTA')}
-                </Button>
+                <Dialog>
+                    <DialogTrigger asChild>
+                        <Button size="lg" className="w-full sm:w-auto relative group bg-white text-black font-semibold h-14 px-10 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all hover:scale-105 active:scale-95 overflow-hidden text-base">
+                            <span className="relative z-10">{tHero('primaryCTA')}</span>
+                            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                        </Button>
+                    </DialogTrigger>
+                    
+                    <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black/90 border-white/10 backdrop-blur-3xl shadow-2xl">
+                        <div className="w-full aspect-video relative flex items-center justify-center bg-black">
+                            <video 
+                                className="w-full h-full object-contain"
+                                controls 
+                                autoPlay 
+                                src="/whatsapp_demo.mp4" 
+                            >
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>
+                    </DialogContent>
+                </Dialog>
+
+                <Link href="/contacto" className="w-full sm:w-auto block">
+                    <Button size="lg" variant="outline" className="w-full h-14 px-10 rounded-full border-white/30 text-foreground bg-white/10 backdrop-blur-lg shadow-sm hover:bg-white/20 transition-all hover:scale-105 active:scale-95 text-base">
+                        {tHero('secondaryCTA')}
+                    </Button>
+                </Link>
             </div>
         </div>
       </section>
@@ -214,7 +239,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-3xl">
-                <Image src="/workflows/email.png" alt="Email Workflow" fill className="object-cover object-left-top opacity-80 mix-blend-screen scale-105 group-hover:scale-100 transition-transform duration-700" />
+                <Image src="/workflows/email.png" alt="Email Workflow" fill quality={100} unoptimized className="object-cover object-left-top opacity-80 group-hover:scale-105 transition-transform duration-700 will-change-transform" />
                 <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
               </div>
             </div>
@@ -234,7 +259,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-3xl">
-                <Image src="/workflows/wa.png" alt="WhatsApp Workflow" fill className="object-cover object-left-top opacity-80 mix-blend-screen scale-105 group-hover:scale-100 transition-transform duration-700" />
+                <Image src="/workflows/wa.png" alt="WhatsApp Workflow" fill quality={100} unoptimized className="object-cover object-left-top opacity-80 group-hover:scale-105 transition-transform duration-700 will-change-transform" />
                 <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
               </div>
             </div>
@@ -254,7 +279,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-3xl">
-                <Image src="/workflows/crm.png" alt="CRM Workflow" fill className="object-cover object-left-top opacity-80 mix-blend-screen scale-105 group-hover:scale-100 transition-transform duration-700" />
+                <Image src="/workflows/crm.png" alt="CRM Workflow" fill quality={100} unoptimized className="object-cover object-left-top opacity-80 group-hover:scale-105 transition-transform duration-700 will-change-transform" />
                 <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
               </div>
             </div>
@@ -274,7 +299,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-3xl">
-                <Image src="/workflows/tickets.png" alt="Tickets Workflow" fill className="object-cover object-left-top opacity-80 mix-blend-screen scale-105 group-hover:scale-100 transition-transform duration-700" />
+                <Image src="/workflows/tickets.png" alt="Tickets Workflow" fill quality={100} unoptimized className="object-cover object-left-top opacity-80 group-hover:scale-105 transition-transform duration-700 will-change-transform" />
                 <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
               </div>
             </div>
@@ -287,7 +312,7 @@ export default function Home() {
       <section ref={archSectionRef} className="py-32 px-6 bg-black relative overflow-hidden">
         {/* Cinematic AI Architecture Background */}
         <div className="absolute inset-0 -z-20">
-            <Image src="/arch_diagram.png" alt="AI Architecture" fill className="object-cover opacity-20 mix-blend-luminosity" />
+            <Image src="/arch_diagram.png" alt="AI Architecture" fill quality={100} unoptimized className="object-cover opacity-20" />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black pointer-events-none" />
         </div>
         

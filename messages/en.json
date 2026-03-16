@@ -8,7 +8,7 @@
     "logoSpace": "Logo Space"
   },
   "Hero": {
-    "badge": "Automation V2",
+    "badge": "",
     "title1": "Reclaim your time.",
     "title2": "Automate your business.",
     "subtitle": "Stop doing repetitive tasks that steal your hours. Delega automates them so you can focus on growing your business.",
@@ -38,18 +38,22 @@
   "Architecture": {
     "title": "Human-in-the-Loop Architecture",
     "inputs": "Inputs (Mail/WA)",
+    "descInputs": "Incoming emails, tickets, or messages.",
     "router": "Agent Router (RAG)",
+    "descRouter": "Classifies and extracts key data instantly.",
     "tools": "Tools / Tools API",
-    "human": "HIL Approval (Human)",
+    "descTools": "Executes actions in your CRM automatically.",
+    "human": "Human Oversight (Human-in-the-Loop)",
+    "descHuman": "Final validation before sending replies.",
     "desc": "The agent classifies, uses semantic memory, and suggests drafts to save you time, while enforcing human approval for sensitive tasks."
   },
   "FooterCTA": {
     "title": "Scale your operations without scaling payroll",
-    "subtitle": "Index your commercial and logistics documentation, answer corporate emails, and respond to WhatsApps delivering client documents. GDPR compliant.",
+    "subtitle": "Index your commercial and logistics documentation, answer corporate emails, and respond to WhatsApps delivering client documents. GDPR compliant (General Data Protection Regulation).",
     "button": "Schedule Tech Consultation"
   },
   "Footer": {
-    "desc": "The AI that scales your business effortlessly. Scale your operations at minimum cost, with 100% secure data and zero worries.",
+    "desc": "The AI that makes your business grow effortlessly. More operations, lower costs, zero worries.",
     "productTitle": "Product",
     "links": {
       "email": "Email Agent",

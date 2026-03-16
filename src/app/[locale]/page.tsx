@@ -166,12 +166,8 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center max-w-5xl relative z-10">
-            <div className="hero-badge inline-flex items-center rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-md px-4 py-1.5 text-sm font-medium mb-10 text-orange-100 shadow-[0_0_15px_rgba(249,115,22,0.2)]">
-                <span className="flex h-2 w-2 rounded-full bg-orange-400 mr-2 animate-pulse shadow-[0_0_8px_rgba(251,146,60,0.8)]"></span>
-                {tHero('badge')}
-            </div>
 
-            <h1 ref={titleRef} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 pb-4 text-foreground drop-shadow-sm leading-tight [perspective:1000px]">
+            <h1 ref={titleRef} className="text-[36px] md:text-[56px] lg:text-7xl font-bold tracking-tighter mb-6 pb-4 text-foreground drop-shadow-sm leading-[1.15] [perspective:1000px]">
                 <div className="inline-block">{tHero('title1')}</div><br className="hidden md:inline" />
                 <div className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-rose-400 drop-shadow-lg pb-4"> {tHero('title2')}</div>
             </h1>
@@ -180,12 +176,11 @@ export default function Home() {
                 {tHero('subtitle')}
             </p>
 
-            <div ref={ctaRef} className="flex flex-col sm:flex-row gap-5 mb-24 w-full sm:w-auto">
+            <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-stretch">
                 <Dialog>
                     <DialogTrigger asChild>
-                        <Button size="lg" className="w-full sm:w-auto relative group bg-white text-black font-semibold h-14 px-10 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all hover:scale-105 active:scale-95 overflow-hidden text-base">
-                            <span className="relative z-10">{tHero('primaryCTA')}</span>
-                            <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-transparent via-black/5 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
+                        <Button size="lg" className="w-full h-14 sm:w-auto relative bg-orange-600 text-white font-semibold rounded-lg shadow-[0_4px_14px_0_rgba(234,88,12,0.39)] hover:shadow-[0_6px_20px_rgba(234,88,12,0.23)] hover:bg-orange-500 transition-all hover:scale-[1.02] active:scale-95 text-base">
+                            {tHero('primaryCTA')}
                         </Button>
                     </DialogTrigger>
                     
@@ -204,7 +199,7 @@ export default function Home() {
                 </Dialog>
 
                 <Link href="/contacto" className="w-full sm:w-auto block">
-                    <Button size="lg" variant="outline" className="w-full h-14 px-10 rounded-full border-white/30 text-foreground bg-white/10 backdrop-blur-lg shadow-sm hover:bg-white/20 transition-all hover:scale-105 active:scale-95 text-base">
+                    <Button size="lg" variant="outline" className="w-full h-14 sm:w-auto rounded-lg border-white/20 text-white bg-transparent hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-95 text-base">
                         {tHero('secondaryCTA')}
                     </Button>
                 </Link>
@@ -223,82 +218,86 @@ export default function Home() {
             <p className="text-xl text-zinc-400 max-w-3xl mx-auto font-light">{tModules('subtitle')}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Email Triage */}
-            <div ref={(el) => { cardsRef.current[0] = el; }} className="spotlight-card group flex flex-col rounded-3xl bg-zinc-900/40 backdrop-blur-xl overflow-hidden h-[400px] lg:col-span-2 relative border border-white/5">
-              <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100" style={{ background: 'radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(249,115,22,0.15), transparent 40%)' }}/>
-              <div className="p-8 border-b border-white/5 bg-white/[0.02] flex justify-between items-center shrink-0 z-10">
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2.5 bg-orange-500/10 rounded-xl border border-orange-500/20">
-                        <LucideInbox className="h-6 w-6 text-orange-400 drop-shadow-[0_0_8px_rgba(251,146,60,0.8)]" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white">{tModules('email.title')}</h3>
+            <div ref={(el) => { cardsRef.current[0] = el; }} className="spotlight-card group flex flex-col rounded-2xl bg-zinc-900/60 backdrop-blur-xl overflow-hidden h-[420px] relative border border-white/10 shadow-lg">
+              <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100" style={{ background: 'radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(249,115,22,0.12), transparent 40%)' }}/>
+              <div className="p-6 md:p-8 border-b border-white/5 bg-white/[0.02] flex flex-col justify-start items-start shrink-0 z-10 w-full h-[180px]">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2.5 bg-orange-500/10 rounded-xl border border-orange-500/20">
+                      <LucideInbox className="h-5 w-5 text-orange-400 drop-shadow-[0_0_8px_rgba(251,146,60,0.8)]" />
                   </div>
-                  <p className="text-base text-zinc-400">{tModules('email.desc')}</p>
+                  <h3 className="text-xl font-bold text-white">{tModules('email.title')}</h3>
                 </div>
+                <p className="text-sm text-zinc-400 mb-4 line-clamp-2">{tModules('email.desc')}</p>
+                <Link href={{ pathname: '/producto', hash: 'email' }} className="mt-auto inline-flex items-center text-sm font-semibold text-orange-400 hover:text-orange-300 transition-colors">
+                  Ver cómo funciona <span className="ml-1">&rarr;</span>
+                </Link>
               </div>
-              <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-3xl">
+              <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-2xl">
                 <Image src="/workflows/email.png" alt="Email Workflow" fill quality={100} unoptimized className="object-cover object-left-top opacity-80 group-hover:scale-105 transition-transform duration-700 will-change-transform" />
                 <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
               </div>
             </div>
 
             {/* WA Agent */}
-            <div ref={(el) => { cardsRef.current[1] = el; }} className="spotlight-card group flex flex-col rounded-3xl bg-zinc-900/40 backdrop-blur-xl overflow-hidden h-[400px] relative border border-white/5">
-              <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100" style={{ background: 'radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(251,146,60,0.15), transparent 40%)' }}/>
-              <div className="p-8 border-b border-white/5 bg-white/[0.02] flex justify-between items-center shrink-0 z-10">
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2.5 bg-orange-400/10 rounded-xl border border-orange-400/20">
-                        <LucideMessageCircle className="h-6 w-6 text-orange-400 drop-shadow-[0_0_8px_rgba(251,146,60,0.8)]" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white leading-tight">{tModules('whatsapp.title')}</h3>
+            <div ref={(el) => { cardsRef.current[1] = el; }} className="spotlight-card group flex flex-col rounded-2xl bg-zinc-900/60 backdrop-blur-xl overflow-hidden h-[420px] relative border border-white/10 shadow-lg">
+              <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100" style={{ background: 'radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(251,146,60,0.12), transparent 40%)' }}/>
+              <div className="p-6 md:p-8 border-b border-white/5 bg-white/[0.02] flex flex-col justify-start items-start shrink-0 z-10 w-full h-[180px]">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2.5 bg-orange-400/10 rounded-xl border border-orange-400/20">
+                      <LucideMessageCircle className="h-5 w-5 text-orange-400 drop-shadow-[0_0_8px_rgba(251,146,60,0.8)]" />
                   </div>
-                  <p className="text-sm text-zinc-400">{tModules('whatsapp.desc')}</p>
+                  <h3 className="text-xl font-bold text-white leading-tight">{tModules('whatsapp.title')}</h3>
                 </div>
+                <p className="text-sm text-zinc-400 mb-4 line-clamp-2">{tModules('whatsapp.desc')}</p>
+                <Link href={{ pathname: '/producto', hash: 'whatsapp' }} className="mt-auto inline-flex items-center text-sm font-semibold text-orange-400 hover:text-orange-300 transition-colors">
+                  Ver cómo funciona <span className="ml-1">&rarr;</span>
+                </Link>
               </div>
-              <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-3xl">
+              <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-2xl">
                 <Image src="/workflows/wa.png" alt="WhatsApp Workflow" fill quality={100} unoptimized className="object-cover object-left-top opacity-80 group-hover:scale-105 transition-transform duration-700 will-change-transform" />
                 <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
               </div>
             </div>
 
             {/* CRM Lite */}
-            <div ref={(el) => { cardsRef.current[2] = el; }} className="spotlight-card group flex flex-col rounded-3xl bg-zinc-900/40 backdrop-blur-xl overflow-hidden h-[400px] relative border border-white/5">
-              <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100" style={{ background: 'radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(249,115,22,0.15), transparent 40%)' }}/>
-              <div className="p-8 border-b border-white/5 bg-white/[0.02] flex justify-between items-center shrink-0 z-10">
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2.5 bg-orange-500/10 rounded-xl border border-orange-500/20">
-                        <LucideDatabase className="h-6 w-6 text-orange-400 drop-shadow-[0_0_8px_rgba(251,146,60,0.8)]" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white leading-tight">{tModules('crm.title')}</h3>
+            <div ref={(el) => { cardsRef.current[2] = el; }} className="spotlight-card group flex flex-col rounded-2xl bg-zinc-900/60 backdrop-blur-xl overflow-hidden h-[420px] relative border border-white/10 shadow-lg">
+              <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100" style={{ background: 'radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(249,115,22,0.12), transparent 40%)' }}/>
+              <div className="p-6 md:p-8 border-b border-white/5 bg-white/[0.02] flex flex-col justify-start items-start shrink-0 z-10 w-full h-[180px]">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2.5 bg-orange-500/10 rounded-xl border border-orange-500/20">
+                      <LucideDatabase className="h-5 w-5 text-orange-400 drop-shadow-[0_0_8px_rgba(251,146,60,0.8)]" />
                   </div>
-                  <p className="text-sm text-zinc-400">{tModules('crm.desc')}</p>
+                  <h3 className="text-xl font-bold text-white leading-tight">{tModules('crm.title')}</h3>
                 </div>
+                <p className="text-sm text-zinc-400 mb-4 line-clamp-2">{tModules('crm.desc')}</p>
+                <Link href={{ pathname: '/producto', hash: 'crm' }} className="mt-auto inline-flex items-center text-sm font-semibold text-orange-400 hover:text-orange-300 transition-colors">
+                  Ver cómo funciona <span className="ml-1">&rarr;</span>
+                </Link>
               </div>
-              <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-3xl">
+              <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-2xl">
                 <Image src="/workflows/crm.png" alt="CRM Workflow" fill quality={100} unoptimized className="object-cover object-left-top opacity-80 group-hover:scale-105 transition-transform duration-700 will-change-transform" />
                 <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
               </div>
             </div>
 
             {/* TICKETS */}
-            <div ref={(el) => { cardsRef.current[3] = el; }} className="spotlight-card group flex flex-col rounded-3xl bg-zinc-900/40 backdrop-blur-xl overflow-hidden h-[400px] lg:col-span-2 relative border border-white/5">
-              <div className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100" style={{ background: 'radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(248,113,113,0.15), transparent 40%)' }}/>
-              <div className="p-8 border-b border-white/5 bg-white/[0.02] flex justify-between items-center shrink-0 z-10">
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2.5 bg-red-400/10 rounded-xl border border-red-400/20">
-                         <LucideTicket className="h-6 w-6 text-red-400 drop-shadow-[0_0_8px_rgba(248,113,113,0.8)]" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white">{tModules('tickets.title')}</h3>
+            <div ref={(el) => { cardsRef.current[3] = el; }} className="spotlight-card group flex flex-col rounded-2xl bg-zinc-900/60 backdrop-blur-xl overflow-hidden h-[420px] relative border border-white/10 shadow-lg">
+              <div className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-300 group-hover:opacity-100" style={{ background: 'radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(248,113,113,0.12), transparent 40%)' }}/>
+              <div className="p-6 md:p-8 border-b border-white/5 bg-white/[0.02] flex flex-col justify-start items-start shrink-0 z-10 w-full h-[180px]">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2.5 bg-red-400/10 rounded-xl border border-red-400/20">
+                       <LucideTicket className="h-5 w-5 text-red-400 drop-shadow-[0_0_8px_rgba(248,113,113,0.8)]" />
                   </div>
-                  <p className="text-base text-zinc-400">{tModules('tickets.desc')}</p>
+                  <h3 className="text-xl font-bold text-white">{tModules('tickets.title')}</h3>
                 </div>
+                <p className="text-sm text-zinc-400 mb-4 line-clamp-2">{tModules('tickets.desc')}</p>
+                <Link href={{ pathname: '/producto', hash: 'tickets' }} className="mt-auto inline-flex items-center text-sm font-semibold text-red-400 hover:text-red-300 transition-colors">
+                  Ver cómo funciona <span className="ml-1">&rarr;</span>
+                </Link>
               </div>
-              <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-3xl">
+              <div className="bg-black flex-1 relative z-10 w-full overflow-hidden rounded-b-2xl">
                 <Image src="/workflows/tickets.png" alt="Tickets Workflow" fill quality={100} unoptimized className="object-cover object-left-top opacity-80 group-hover:scale-105 transition-transform duration-700 will-change-transform" />
                 <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
               </div>
@@ -319,36 +318,40 @@ export default function Home() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <h2 className="arch-header text-4xl font-bold tracking-tight mb-16 text-white">{tArch('title')}</h2>
           
-          <div ref={diagramRef} className="relative border border-white/5 rounded-3xl p-10 bg-black/40 backdrop-blur-xl flex flex-col md:flex-row gap-6 items-center justify-between shadow-2xl">
+          <div ref={diagramRef} className="relative border border-white/10 rounded-3xl p-10 bg-[#0f0f11] flex flex-col md:flex-row gap-6 items-center justify-between shadow-2xl overflow-hidden">
             {/* Connection Line Background Layer */}
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-red-500/5 pointer-events-none rounded-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-red-500/5 pointer-events-none" />
             
-            <div className="arch-box relative z-10 px-6 py-5 border border-white/10 rounded-2xl text-[15px] font-medium text-zinc-300 shadow-xl w-full md:w-auto bg-gradient-to-br from-neutral-900 to-black">
-              {tArch('inputs')}
+            <div className="arch-box relative z-10 px-6 py-5 border border-white/10 rounded-2xl shadow-xl w-full md:w-auto bg-gradient-to-br from-neutral-900 to-black text-left flex-1 h-[110px] flex flex-col justify-center">
+              <div className="text-[17px] font-semibold text-zinc-100 mb-1">{tArch('inputs')}</div>
+              <div className="text-[13px] font-light text-zinc-400 leading-snug">{tArch('descInputs')}</div>
             </div>
             
-            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-orange-500/50 to-zinc-800 flex-1 mx-2 relative overflow-hidden rounded-full">
+            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-orange-500/50 to-zinc-800 w-12 mx-2 relative overflow-hidden rounded-full shrink-0">
                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-400 to-transparent animate-[shimmer_2s_infinite]" />
             </div>
 
-            <div className="arch-box relative z-10 px-6 py-5 border border-orange-500/40 rounded-2xl text-[15px] text-orange-200 font-semibold shadow-[0_0_30px_rgba(249,115,22,0.15)] w-full md:w-auto bg-gradient-to-br from-orange-950/40 to-black">
-              {tArch('router')}
+            <div className="arch-box relative z-10 px-6 py-5 border border-orange-500/40 rounded-2xl shadow-[0_0_30px_rgba(249,115,22,0.15)] w-full md:w-auto bg-gradient-to-br from-orange-950/40 to-black text-left flex-1 h-[110px] flex flex-col justify-center">
+              <div className="text-[17px] font-semibold text-orange-200 mb-1">{tArch('router')}</div>
+              <div className="text-[13px] font-light text-orange-200/60 leading-snug">{tArch('descRouter')}</div>
             </div>
             
-            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-red-500/50 to-zinc-800 flex-1 mx-2 relative overflow-hidden rounded-full">
+            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-red-500/50 to-zinc-800 w-12 mx-2 relative overflow-hidden rounded-full shrink-0">
                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-400 to-transparent animate-[shimmer_2s_infinite_0.5s]" />
             </div>
 
-            <div className="arch-box relative z-10 px-6 py-5 border border-red-500/40 rounded-2xl text-[15px] text-red-200 font-semibold shadow-[0_0_30px_rgba(248,113,113,0.15)] w-full md:w-auto bg-gradient-to-br from-red-950/40 to-black">
-              {tArch('tools')}
+            <div className="arch-box relative z-10 px-6 py-5 border border-red-500/40 rounded-2xl shadow-[0_0_30px_rgba(248,113,113,0.15)] w-full md:w-auto bg-gradient-to-br from-red-950/40 to-black text-left flex-1 h-[110px] flex flex-col justify-center">
+              <div className="text-[17px] font-semibold text-red-200 mb-1">{tArch('tools')}</div>
+              <div className="text-[13px] font-light text-red-200/60 leading-snug">{tArch('descTools')}</div>
             </div>
             
-            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-rose-500/50 to-zinc-800 flex-1 mx-2 relative overflow-hidden rounded-full">
+            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-rose-500/50 to-zinc-800 w-12 mx-2 relative overflow-hidden rounded-full shrink-0">
                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-rose-400 to-transparent animate-[shimmer_2s_infinite_1s]" />
             </div>
 
-            <div className="arch-box relative z-10 px-6 py-5 border border-rose-500/40 rounded-2xl text-[15px] text-rose-200 font-semibold shadow-[0_0_30px_rgba(244,63,94,0.15)] w-full md:w-auto bg-gradient-to-br from-rose-950/40 to-black">
-              {tArch('human')}
+            <div className="arch-box relative z-10 px-6 py-5 border border-rose-500/40 rounded-2xl shadow-[0_0_30px_rgba(244,63,94,0.15)] w-full md:w-auto bg-gradient-to-br from-rose-950/40 to-black text-left flex-1 h-[110px] flex flex-col justify-center">
+              <div className="text-[17px] font-semibold text-rose-200 mb-1">{tArch('human')}</div>
+              <div className="text-[13px] font-light text-rose-200/60 leading-snug">{tArch('descHuman')}</div>
             </div>
           </div>
           <p className="arch-header mt-12 text-xl font-light text-zinc-400 max-w-3xl mx-auto">{tArch('desc')}</p>

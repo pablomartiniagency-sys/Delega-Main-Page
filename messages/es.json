@@ -8,7 +8,7 @@
     "logoSpace": "Espacio para Logo"
   },
   "Hero": {
-    "badge": "Automation V2",
+    "badge": "",
     "title1": "Recupera tu tiempo.",
     "title2": "Automatiza tu negocio.",
     "subtitle": "Deja de hacer tareas repetitivas que te roban horas. Delega las automatiza para que tú te centres en hacer crecer tu negocio.",
@@ -38,18 +38,22 @@
   "Architecture": {
     "title": "Arquitectura Human-in-the-Loop",
     "inputs": "Inputs (Mail/WA)",
+    "descInputs": "Entrada de correos, tickets o mensajes.",
     "router": "Agent Router (RAG)",
+    "descRouter": "Clasifica y extrae datos clave al instante.",
     "tools": "Tools / Tools API",
-    "human": "Aprobación HIL (Humano)",
+    "descTools": "Ejecuta acciones en tu CRM de forma automática.",
+    "human": "Supervisión Humana (Human-in-the-Loop)",
+    "descHuman": "Validación final antes de enviar respuestas.",
     "desc": "El agente clasifica, usa memoria semántica y plantea borradores para ahorrarte tiempo, a la vez que introduce borradores para la aprobación humana de tareas sensibles."
   },
   "FooterCTA": {
     "title": "Escala tu operativa sin escalar la nómina",
-    "subtitle": "Indexa tu documentación comercial y logística, atiende tus correos corporativos y responde WhatsApps aportando documentación para el cliente. Cumple con la RGPD.",
+    "subtitle": "Indexa tu documentación comercial y logística, atiende tus correos corporativos y responde WhatsApps aportando documentación para el cliente. Cumple con el RGPD (Reglamento General de Protección de Datos de la UE).",
     "button": "Agendar Consultoría Técnica"
   },
   "Footer": {
-    "desc": "La IA que escala tu negocio sin complicaciones. Escala tu operativa al mínimo coste, con datos 100 % seguros y cero preocupaciones.",
+    "desc": "La IA que hace crecer tu negocio sin complicaciones. Más operativa, menos costes, cero preocupaciones.",
     "productTitle": "Producto",
     "links": {
       "email": "Email Agent",

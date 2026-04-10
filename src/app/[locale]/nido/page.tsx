@@ -22,12 +22,6 @@ export default function NidoPage() {
             transition: { staggerChildren: 0.1 }
         }
     };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
-    };
-
     return (
         <main className="min-h-screen bg-black text-white selection:bg-orange-500/30">
             {/* Ambient Background */}
@@ -150,6 +144,7 @@ export default function NidoPage() {
 }
 
 // Sub-component for the pricing cards (Bento Grid style)
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function PlanCard({ planKey, t }: { planKey: 'seed' | 'growth' | 'corporate'; t: any }) {
     const isPopular = planKey === 'growth';
     

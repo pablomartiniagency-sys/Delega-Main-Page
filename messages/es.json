@@ -52,6 +52,11 @@
     "descHuman": "Validación final antes de enviar respuestas.",
     "desc": "El agente clasifica, usa memoria semántica y plantea borradores para ahorrarte tiempo, a la vez que introduce borradores para la aprobación humana de tareas sensibles."
   },
+  "SecondaryService": {
+    "title": "Desarrollo Web Personalizado",
+    "desc": "Además de nuestros ecosistemas de IA, diseñamos e implementamos plataformas web modernas desde cero. Especializados en centros educativos y negocios, entregamos webs preparadas para integrar agentes inteligentes en el futuro.",
+    "button": "Solicitar Información"
+  },
   "FooterCTA": {
     "title": "Escala tu operativa sin escalar la nómina",
     "subtitle": "Indexa tu documentación comercial y logística, atiende tus correos corporativos y responde WhatsApps aportando documentación para el cliente. Cumple con el RGPD (Reglamento General de Protección de Datos de la UE).",

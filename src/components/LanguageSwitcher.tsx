@@ -16,10 +16,11 @@ export function LanguageSwitcher() {
     const locale = useLocale();
     const router = useRouter();
     const pathname = usePathname();
-    const [isPending, startTransition] = useTransition();
+    const [, startTransition] = useTransition();
 
     const onValueChange = (nextLocale: string) => {
         startTransition(() => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             router.replace({ pathname } as any, { locale: nextLocale });
         });
     };

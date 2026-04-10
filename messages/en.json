@@ -52,6 +52,11 @@
     "descHuman": "Final validation before sending replies.",
     "desc": "The agent classifies, uses semantic memory, and suggests drafts to save you time, while enforcing human approval for sensitive tasks."
   },
+  "SecondaryService": {
+    "title": "Custom Web Development",
+    "desc": "Beyond our AI ecosystems, we design and build modern web platforms from scratch. Specialized in educational centers and businesses, we deliver websites ready to integrate intelligent agents in the future.",
+    "button": "Request Information"
+  },
   "FooterCTA": {
     "title": "Scale your operations without scaling payroll",
     "subtitle": "Index your commercial and logistics documentation, answer corporate emails, and respond to WhatsApps delivering client documents. GDPR compliant (General Data Protection Regulation).",

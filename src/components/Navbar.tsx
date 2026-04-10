@@ -3,7 +3,7 @@
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import { Button } from './ui/button';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,7 +11,6 @@ import { Menu, X } from 'lucide-react';
 
 export function Navbar() {
     const t = useTranslations('Navigation');
-    const locale = useLocale();
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [

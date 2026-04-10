@@ -41,7 +41,7 @@ export function ContactForm() {
                 // Reset form
                 (e.target as HTMLFormElement).reset();
             }
-        } catch (error) {
+        } catch {
             toast({
                 variant: "destructive",
                 title: "Error",

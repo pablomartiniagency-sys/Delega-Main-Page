@@ -3,12 +3,8 @@
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
-import { EmailSimulator } from '@/components/simulators/EmailSimulator';
-import { WhatsAppSimulator } from '@/components/simulators/WhatsAppSimulator';
-import { CRMSimulator } from '@/components/simulators/CRMSimulator';
-import { TicketSimulator } from '@/components/simulators/TicketSimulator';
 import { LucideInbox, LucideMessageCircle, LucideDatabase, LucideTicket } from 'lucide-react';
-import { useTranslations, useLocale } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -24,10 +20,10 @@ if (typeof window !== 'undefined') {
 }
 
 export default function Home() {
-  const locale = useLocale();
   const tHero = useTranslations('Hero');
   const tModules = useTranslations('Modules');
   const tArch = useTranslations('Architecture');
+  const tSecondary = useTranslations('SecondaryService');
   const tFooterCTA = useTranslations('FooterCTA');
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -354,6 +350,26 @@ export default function Home() {
             </div>
           </div>
           <p className="arch-header mt-12 text-xl font-light text-zinc-400 max-w-3xl mx-auto">{tArch('desc')}</p>
+        </div>
+      </section>
+
+      {/* Secondary Service: Web Development */}
+      <section className="py-24 px-6 bg-[#09090b] border-t border-white/5 relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
+          <div className="flex-1 text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-sm">{tSecondary('title')}</h2>
+             <p className="text-lg text-zinc-400 font-light max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                {tSecondary('desc')}
+             </p>
+          </div>
+          <div className="shrink-0">
+             <Link href="/contacto">
+                <Button size="lg" variant="outline" className="h-14 px-8 rounded-full border-white/20 text-white bg-white/5 hover:bg-white/10 hover:border-white/30 transition-all hover:scale-105 active:scale-95 text-base backdrop-blur-sm">
+                   {tSecondary('button')}
+                </Button>
+             </Link>
+          </div>
         </div>
       </section>
 

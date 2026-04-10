@@ -17,6 +17,7 @@ export function Navbar() {
     const navLinks = [
         { href: '/producto', label: t('product') },
         { href: '/casos-de-uso', label: t('useCases') },
+        { href: '/nido', label: t('nido') },
         { href: '/seguridad', label: t('security') },
         { href: '/sobre-nosotros', label: t('about') },
     ] as const;

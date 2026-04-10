@@ -1,6 +1,6 @@
 'use server';
 
-export async function submitContactForm(data: { email: string; volumen: string; stack: string }) {
+export async function submitContactForm(data: { email: string; workers: string; tasks: string; about: string }) {
     try {
         // Validate inputs
         if (!data.email || !data.email.includes('@')) {

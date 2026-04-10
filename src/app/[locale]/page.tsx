@@ -80,24 +80,26 @@ export default function Home() {
     });
 
     // 2. Bento Grid Modules Scroll Animation
-    gsap.fromTo('.modules-header',
-        { y: 50, opacity: 0 },
-        { 
-            y: 0, opacity: 1, duration: 1, 
+    gsap.from('.modules-header',
+        {
+            y: 50, opacity: 0, duration: 1,
+            clearProps: 'all',
             scrollTrigger: {
                 trigger: modulesSectionRef.current,
-                start: "top 80%",
+                start: "top 85%",
+                once: true,
             }
         }
     );
 
-    gsap.fromTo(cardsRef.current,
-        { y: 100, opacity: 0, scale: 0.95 },
-        { 
-            y: 0, opacity: 1, scale: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+    gsap.from(cardsRef.current,
+        {
+            y: 100, opacity: 0, scale: 0.95, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+            clearProps: 'all',
             scrollTrigger: {
                 trigger: modulesSectionRef.current,
-                start: "top 60%",
+                start: "top 75%",
+                once: true,
             }
         }
     );
@@ -106,22 +108,24 @@ export default function Home() {
     const diagramTimeline = gsap.timeline({
         scrollTrigger: {
             trigger: archSectionRef.current,
-            start: "top 70%",
+            start: "top 85%",
+            once: true,
         }
     });
 
-    diagramTimeline.fromTo('.arch-header', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6 })
-                   .fromTo('.arch-box', { scale: 0.8, opacity: 0, y: 20 }, { scale: 1, opacity: 1, y: 0, duration: 0.5, stagger: 0.2, ease: "back.out(1.7)" }, "-=0.2")
-                   .fromTo('.arch-line', { width: 0, opacity: 0 }, { width: "100%", opacity: 1, duration: 0.8, stagger: 0.2, ease: "power2.inOut" }, "-=0.8");
+    diagramTimeline.from('.arch-header', { y: 30, opacity: 0, duration: 0.6, clearProps: 'all' })
+                   .from('.arch-box', { scale: 0.8, opacity: 0, y: 20, duration: 0.5, stagger: 0.2, ease: "back.out(1.7)", clearProps: 'all' }, "-=0.2")
+                   .from('.arch-line', { width: 0, opacity: 0, duration: 0.8, stagger: 0.2, ease: "power2.inOut", clearProps: 'all' }, "-=0.8");
 
     // 4. Footer CTA
-    gsap.fromTo('.footer-content',
-        { y: 50, opacity: 0, scale: 0.9 },
-        { 
-            y: 0, opacity: 1, scale: 1, duration: 1, ease: 'power4.out',
+    gsap.from('.footer-content',
+        {
+            y: 50, opacity: 0, scale: 0.9, duration: 1, ease: 'power4.out',
+            clearProps: 'all',
             scrollTrigger: {
                 trigger: '.footer-section',
-                start: "top 85%",
+                start: "top 90%",
+                once: true,
             }
         }
     );
@@ -310,43 +314,43 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black pointer-events-none" />
         </div>
         
-        <div className="max-w-5xl mx-auto text-center relative z-10">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <h2 className="arch-header text-4xl font-bold tracking-tight mb-16 text-white">{tArch('title')}</h2>
           
-          <div ref={diagramRef} className="relative border border-white/10 rounded-3xl p-10 bg-[#0f0f11] flex flex-col md:flex-row gap-6 items-center justify-between shadow-2xl overflow-hidden">
+          <div ref={diagramRef} className="relative border border-white/10 rounded-3xl px-8 py-8 bg-[#0f0f11] flex flex-col md:flex-row gap-2 items-center justify-between shadow-2xl overflow-hidden">
             {/* Connection Line Background Layer */}
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-red-500/5 pointer-events-none" />
             
-            <div className="arch-box relative z-10 px-6 py-5 border border-white/10 rounded-2xl shadow-xl w-full md:w-auto bg-gradient-to-br from-neutral-900 to-black text-left flex-1 h-[110px] flex flex-col justify-center">
-              <div className="text-[17px] font-semibold text-zinc-100 mb-1">{tArch('inputs')}</div>
-              <div className="text-[13px] font-light text-zinc-400 leading-snug">{tArch('descInputs')}</div>
+            <div className="arch-box relative z-10 px-4 py-4 border border-white/10 rounded-2xl shadow-xl w-full md:max-w-[180px] bg-gradient-to-br from-neutral-900 to-black text-left flex flex-col justify-center min-h-[100px] shrink-0">
+              <div className="text-[14px] font-semibold text-zinc-100 mb-1">{tArch('inputs')}</div>
+              <div className="text-[11px] font-light text-zinc-400 leading-snug">{tArch('descInputs')}</div>
             </div>
             
-            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-orange-500/50 to-zinc-800 w-12 mx-2 relative overflow-hidden rounded-full shrink-0">
+            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-orange-500/50 to-zinc-800 flex-1 relative overflow-hidden rounded-full">
                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-orange-400 to-transparent animate-[shimmer_2s_infinite]" />
             </div>
 
-            <div className="arch-box relative z-10 px-6 py-5 border border-orange-500/40 rounded-2xl shadow-[0_0_30px_rgba(249,115,22,0.15)] w-full md:w-auto bg-gradient-to-br from-orange-950/40 to-black text-left flex-1 h-[110px] flex flex-col justify-center">
-              <div className="text-[17px] font-semibold text-orange-200 mb-1">{tArch('router')}</div>
-              <div className="text-[13px] font-light text-orange-200/60 leading-snug">{tArch('descRouter')}</div>
+            <div className="arch-box relative z-10 px-4 py-4 border border-orange-500/40 rounded-2xl shadow-[0_0_30px_rgba(249,115,22,0.15)] w-full md:max-w-[180px] bg-gradient-to-br from-orange-950/40 to-black text-left flex flex-col justify-center min-h-[100px] shrink-0">
+              <div className="text-[14px] font-semibold text-orange-200 mb-1">{tArch('router')}</div>
+              <div className="text-[11px] font-light text-orange-200/60 leading-snug">{tArch('descRouter')}</div>
             </div>
             
-            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-red-500/50 to-zinc-800 w-12 mx-2 relative overflow-hidden rounded-full shrink-0">
+            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-red-500/50 to-zinc-800 flex-1 relative overflow-hidden rounded-full">
                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-400 to-transparent animate-[shimmer_2s_infinite_0.5s]" />
             </div>
 
-            <div className="arch-box relative z-10 px-6 py-5 border border-red-500/40 rounded-2xl shadow-[0_0_30px_rgba(248,113,113,0.15)] w-full md:w-auto bg-gradient-to-br from-red-950/40 to-black text-left flex-1 h-[110px] flex flex-col justify-center">
-              <div className="text-[17px] font-semibold text-red-200 mb-1">{tArch('tools')}</div>
-              <div className="text-[13px] font-light text-red-200/60 leading-snug">{tArch('descTools')}</div>
+            <div className="arch-box relative z-10 px-4 py-4 border border-red-500/40 rounded-2xl shadow-[0_0_30px_rgba(248,113,113,0.15)] w-full md:max-w-[180px] bg-gradient-to-br from-red-950/40 to-black text-left flex flex-col justify-center min-h-[100px] shrink-0">
+              <div className="text-[14px] font-semibold text-red-200 mb-1">{tArch('tools')}</div>
+              <div className="text-[11px] font-light text-red-200/60 leading-snug">{tArch('descTools')}</div>
             </div>
             
-            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-rose-500/50 to-zinc-800 w-12 mx-2 relative overflow-hidden rounded-full shrink-0">
+            <div className="hidden md:block arch-line h-[2px] bg-gradient-to-r from-zinc-800 via-rose-500/50 to-zinc-800 flex-1 relative overflow-hidden rounded-full">
                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-rose-400 to-transparent animate-[shimmer_2s_infinite_1s]" />
             </div>
 
-            <div className="arch-box relative z-10 px-6 py-5 border border-rose-500/40 rounded-2xl shadow-[0_0_30px_rgba(244,63,94,0.15)] w-full md:w-auto bg-gradient-to-br from-rose-950/40 to-black text-left flex-1 h-[110px] flex flex-col justify-center">
-              <div className="text-[17px] font-semibold text-rose-200 mb-1">{tArch('human')}</div>
-              <div className="text-[13px] font-light text-rose-200/60 leading-snug">{tArch('descHuman')}</div>
+            <div className="arch-box relative z-10 px-4 py-4 border border-rose-500/40 rounded-2xl shadow-[0_0_30px_rgba(244,63,94,0.15)] w-full md:max-w-[180px] bg-gradient-to-br from-rose-950/40 to-black text-left flex flex-col justify-center min-h-[100px] shrink-0">
+              <div className="text-[14px] font-semibold text-rose-200 mb-1">{tArch('human')}</div>
+              <div className="text-[11px] font-light text-rose-200/60 leading-snug">{tArch('descHuman')}</div>
             </div>
           </div>
           <p className="arch-header mt-12 text-xl font-light text-zinc-400 max-w-3xl mx-auto">{tArch('desc')}</p>

@@ -1,7 +1,12 @@
 {
+  "Metadata": {
+    "title": "Delega | AI Agent Platform for SMEs",
+    "description": "Unify channels, index knowledge and automate your operations with corporate LLM agents."
+  },
   "Navigation": {
     "product": "Product",
     "useCases": "Use Cases",
+    "nido": "Pricing (Nest)",
     "security": "Security & Data",
     "about": "About Us",
     "contact": "Contact Us",
@@ -184,10 +189,12 @@
     "desc": "Fill out the form and our technical team will evaluate the feasibility of implementing Delega in your infrastructure.",
     "emailLabel": "Professional Email",
     "emailPlaceholder": "example@yourcompany.com",
-    "volLabel": "Incident Volume/Month (Approx)",
-    "volPlaceholder": "Ex. 1000 tickets",
-    "stackLabel": "Current Tech Stack",
-    "stackPlaceholder": "Gmail, Shopify, HubSpot...",
+    "workersLabel": "Number of Employees",
+    "workersPlaceholder": "Ex. 10 - 50",
+    "tasksLabel": "Most time-consuming tasks",
+    "tasksPlaceholder": "Ex. Customer support on WhatsApp...",
+    "aboutLabel": "Tell us about your business",
+    "aboutPlaceholder": "What does your company do?",
     "button": "Schedule Tech Call"
   },
   "Simulators": {
@@ -260,6 +267,69 @@
       "msg6": "Hello! I'm Carlos. The delivery driver already has the route, but I'll call the base to redirect it. Give us a moment.",
       "bot": "Bot",
       "agent": "Agent"
+    }
+  },
+  "Nido": {
+    "heroTitle1": "Find your ",
+    "heroTitle2": "Nest",
+    "heroDesc": "From solopreneurs taking their first steps to large corporations. We have the perfect AI to scale your operations without scaling payroll.",
+    "tabs": {
+      "tab1": "🌱 Seed (Solopreneurs)",
+      "tab2": "🚀 Growth (SMBs)",
+      "tab3": "🏢 Corporate"
+    },
+    "plans": {
+      "seed": {
+        "title": "Seed Nest",
+        "description": "Save up to 15 hours a week by automating the essentials.",
+        "price": "From $49/mo",
+        "features": [
+          "1 Support Agent (Web/WhatsApp)",
+          "Training with 1 PDF or FAQ",
+          "Automatic lead capture",
+          "Email support"
+        ],
+        "cta": "Start free trial"
+      },
+      "growth": {
+        "title": "Growth Nest",
+        "badge": "Most popular",
+        "description": "Multiply your human team's capacity without multiplying costs.",
+        "price": "From $199/mo",
+        "features": [
+          "Smart Omnichannel Agent",
+          "Dynamic Knowledge Base",
+          "Seamless human handoff",
+          "Basic CRM integrations"
+        ],
+        "cta": "Schedule Demo"
+      },
+      "corporate": {
+        "title": "Corporate Nest",
+        "description": "Unify the support of all your projects into a single tailored AI ecosystem.",
+        "price": "Custom",
+        "features": [
+          "Multiple specialized agents",
+          "Complex & custom API integrations",
+          "Enterprise security & SLA guarantee",
+          "Dedicated Account Manager"
+        ],
+        "cta": "Talk to Sales"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How long does it take to implement my Nest?",
+      "a1": "It depends on complexity. The Seed plan can be ready in 48 hours. Custom solutions usually take 2-4 weeks.",
+      "q2": "Is my data secure?",
+      "a2": "Absolutely. We are GDPR compliant and do not use your corporate information to train public language models.",
+      "q3": "Can I upgrade my plan later?",
+      "a3": "Yes, the ecosystem is designed to scale with you. You can upgrade from Seed to Growth at any time."
+    },
+    "cta": {
+      "title": "Not sure which Nest is right for you?",
+      "desc": "Schedule a free 15-minute audit and we'll evaluate your processes with no obligation.",
+      "button": "Schedule Free Audit"
     }
   }
 }

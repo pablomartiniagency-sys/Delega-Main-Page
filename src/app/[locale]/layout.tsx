@@ -4,15 +4,20 @@ import '../globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
-export const metadata: Metadata = {
-  title: 'Delega | Plataforma de Agentes IA para PYMEs',
-  description: 'Unifica canales, indexa conocimiento y automatiza tu operativa con agentes LLM corporativos.',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 export default async function RootLayout({
   children,

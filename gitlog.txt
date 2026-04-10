@@ -1,0 +1,11 @@
+43c7a98 | fix: entirely remove hero badge and its gsap reference
+240d1c1 | feat: comprehensive linear-style UI/UX redesign of landing page
+21281bb | chore: change hero CTA text to be more generic
+a02a37e | feat: add whatsapp video modal to hero section and update CTA labels
+ca5a79f | feat: replace heavy 3d renders in use cases with minimal glassmorphism lucide diagrams
+a2d6413 | refactor: implement strict type-safe localized routing with next-intl
+332795c | feat(contact): implement Server Action for contact form submission and fix translation bug
+62b800f | fix(ui): correct product mockup colors, cases images, translations and contact Link
+a3e6d0b | feat: migrate to premium UI and i18n
+7201c22 | feat: implementation of premium tech calm redesign with Next.js 14, shadcn/ui and interactive modules
+7520264 | Initial commit from Create Next App

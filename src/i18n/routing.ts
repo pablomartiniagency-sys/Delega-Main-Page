@@ -14,6 +14,10 @@ export const routing = defineRouting({
       es: '/casos-de-uso',
       en: '/use-cases'
     },
+    '/nido': {
+      es: '/nido',
+      en: '/pricing'
+    },
     '/seguridad': {
       es: '/seguridad',
       en: '/security'

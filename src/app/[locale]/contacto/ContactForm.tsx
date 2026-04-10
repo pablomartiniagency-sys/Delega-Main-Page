@@ -20,11 +20,12 @@ export function ContactForm() {
 
         const formData = new FormData(e.currentTarget);
         const email = formData.get('email') as string;
-        const volumen = formData.get('volumen') as string;
-        const stack = formData.get('stack') as string;
+        const workers = formData.get('workers') as string;
+        const tasks = formData.get('tasks') as string;
+        const about = formData.get('about') as string;
 
         try {
-            const result = await submitContactForm({ email, volumen, stack });
+            const result = await submitContactForm({ email, workers, tasks, about });
 
             if (result.error) {
                 toast({
@@ -66,22 +67,32 @@ export function ContactForm() {
                 />
             </div>
             <div className="space-y-2">
-                <Label htmlFor="volumen">{t('volLabel')}</Label>
+                <Label htmlFor="workers">{t('workersLabel')}</Label>
                 <Input 
-                    id="volumen" 
-                    name="volumen" 
+                    id="workers" 
+                    name="workers" 
                     type="text" 
-                    placeholder={t('volPlaceholder')} 
+                    placeholder={t('workersPlaceholder')} 
                     className="bg-background/50 border-border h-12" 
                     disabled={isPending}
                 />
             </div>
             <div className="space-y-2">
-                <Label htmlFor="stack">{t('stackLabel')}</Label>
+                <Label htmlFor="tasks">{t('tasksLabel')}</Label>
                 <Textarea 
-                    id="stack" 
-                    name="stack" 
-                    placeholder={t('stackPlaceholder')} 
+                    id="tasks" 
+                    name="tasks" 
+                    placeholder={t('tasksPlaceholder')} 
+                    className="bg-background/50 border-border min-h-20" 
+                    disabled={isPending}
+                />
+            </div>
+            <div className="space-y-2">
+                <Label htmlFor="about">{t('aboutLabel')}</Label>
+                <Textarea 
+                    id="about" 
+                    name="about" 
+                    placeholder={t('aboutPlaceholder')} 
                     className="bg-background/50 border-border min-h-32" 
                     disabled={isPending}
                 />

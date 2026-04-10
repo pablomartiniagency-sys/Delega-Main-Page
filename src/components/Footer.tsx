@@ -21,6 +21,7 @@ export function Footer() {
                     <Link href={{ pathname: '/producto', hash: 'email' }} className="text-sm text-zinc-400 hover:text-white transition-colors">{t('links.email')}</Link>
                     <Link href={{ pathname: '/producto', hash: 'whatsapp' }} className="text-sm text-zinc-400 hover:text-white transition-colors">{t('links.whatsapp')}</Link>
                     <Link href={{ pathname: '/producto', hash: 'crm' }} className="text-sm text-zinc-400 hover:text-white transition-colors">{t('links.crm')}</Link>
+                    <Link href="/nido" className="text-sm text-zinc-400 hover:text-white transition-colors">Precios (Nido)</Link>
                     <Link href="/seguridad" className="text-sm text-zinc-400 hover:text-white transition-colors">{t('links.security')}</Link>
                 </div>
                 <div className="flex flex-col space-y-4">

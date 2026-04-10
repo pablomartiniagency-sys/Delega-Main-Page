@@ -1,10 +1,15 @@
 {
+  "Metadata": {
+    "title": "Delega | Plataforma de Agentes IA para PYMEs",
+    "description": "Unifica canales, indexa conocimiento y automatiza tu operativa con agentes LLM corporativos."
+  },
   "Navigation": {
     "product": "Producto",
     "useCases": "Casos de Uso",
+    "nido": "Precios (Nido)",
     "security": "Seguridad & Datos",
     "about": "Sobre Nosotros",
-    "contact": "Contáctanos",
+    "contact": "Contáctenos",
     "logoSpace": "Espacio para Logo"
   },
   "Hero": {
@@ -184,10 +189,12 @@
     "desc": "Rellena el formulario y nuestro equipo técnico evaluará la viabilidad de implementar Delega en tu infraestructura.",
     "emailLabel": "Correo Profesional",
     "emailPlaceholder": "ejemplo@tuempresa.com",
-    "volLabel": "Volumen de Incidencias/Mes (Aprox)",
-    "volPlaceholder": "Ej. 1000 tickets",
-    "stackLabel": "Stack Tecnológico Actual",
-    "stackPlaceholder": "Gmail, Shopify, HubSpot...",
+    "workersLabel": "Número de Empleados",
+    "workersPlaceholder": "Ej. 10 - 50",
+    "tasksLabel": "Tareas que consumen más tiempo",
+    "tasksPlaceholder": "Ej. Atender WhatsApp, facturar...",
+    "aboutLabel": "Cuéntanos sobre tu negocio",
+    "aboutPlaceholder": "¿A qué se dedica tu empresa?",
     "button": "Agendar Llamada Técnica"
   },
   "Simulators": {
@@ -260,6 +267,69 @@
       "msg6": "¡Hola! Soy Carlos. El repartidor ya tiene la ruta, pero llamaré a la base para redirigirlo. Denos un momento.",
       "bot": "Bot",
       "agent": "Agente"
+    }
+  },
+  "Nido": {
+    "heroTitle1": "Encuentra tu ",
+    "heroTitle2": "Nido",
+    "heroDesc": "Desde emprendedores dando sus primeros pasos hasta grandes corporaciones. Tenemos la IA perfecta para escalar tu operativa sin escalar la nómina.",
+    "tabs": {
+      "tab1": "🌱 Semilla (Autónomos)",
+      "tab2": "🚀 Crecimiento (Pymes)",
+      "tab3": "🏢 Corporativo"
+    },
+    "plans": {
+      "seed": {
+        "title": "Nido Semilla",
+        "description": "Ahorra hasta 15 horas a la semana automatizando lo esencial.",
+        "price": "Desde 49€/mes",
+        "features": [
+          "1 Agente de atención (Web/WhatsApp)",
+          "Entrenamiento con 1 PDF o FAQ",
+          "Captura de leads automática",
+          "Soporte por email"
+        ],
+        "cta": "Empezar prueba gratis"
+      },
+      "growth": {
+        "title": "Nido Crecimiento",
+        "badge": "Más popular",
+        "description": "Multiplica la capacidad de tu equipo humano sin multiplicar tus costes.",
+        "price": "Desde 199€/mes",
+        "features": [
+          "Agente Omnicanal Inteligente",
+          "Base de Conocimiento Dinámica (Web scrap)",
+          "Traspaso a humano (Handoff)",
+          "Integraciones con CRM básico"
+        ],
+        "cta": "Agendar Demo"
+      },
+      "corporate": {
+        "title": "Nido Corporativo",
+        "description": "Unifica la atención de todos tus proyectos en un solo ecosistema IA a medida.",
+        "price": "A medida",
+        "features": [
+          "Múltiples agentes especializados",
+          "Integraciones API complejas y a medida",
+          "Seguridad Enterprise y SLA garantizado",
+          "Account Manager dedicado"
+        ],
+        "cta": "Hablar con Ventas"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": "¿Cuánto tardan en implementar mi Nido?",
+      "a1": "Depende de la complejidad. El Nido Semilla puede estar listo en 48 horas. Soluciones personalizadas suelen tardar entre 2 y 4 semanas.",
+      "q2": "¿Mis datos están seguros?",
+      "a2": "Absolutamente. Cumplimos con el RGPD y no utilizamos tu información corporativa para entrenar modelos públicos de lenguaje, todo se aísla por cliente.",
+      "q3": "¿Puedo escalar de plan más adelante?",
+      "a3": "Sí, el ecosistema está diseñado para escalar contigo. Puedes dar el salto de Semilla a Crecimiento en cualquier momento."
+    },
+    "cta": {
+      "title": "¿No estás seguro de cuál es tu Nido?",
+      "desc": "Agenda una auditoría gratuita de 15 minutos y evaluaremos tus procesos sin compromiso.",
+      "button": "Agendar Auditoría Gratuita"
     }
   }
 }
